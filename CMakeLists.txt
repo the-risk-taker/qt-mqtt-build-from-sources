@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.20)
+
+project(TestQtMQTT LANGUAGES CXX)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_COLOR_DIAGNOSTICS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Quick Mqtt REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Quick Mqtt REQUIRED)
+
+add_subdirectory(app)
