@@ -1,5 +1,7 @@
 # Qt MQTT build from sources
 
+> Tested under MinGW + Qt5, and MSVC + Qt6
+
 ## Requirements
 
 To build Qt MQTT from sources, you will need the following:
@@ -17,9 +19,9 @@ To download `Perl` for Windows, go to <https://strawberryperl.com/>. After insta
 
 The `Toolchain` will depend on your platform, for example, MSVC for Windows, GCC or Clang for Linux, etc.
 
-## Building the Qt MQTT module with CMake or qmake
+## Building the Qt MQTT module with CMake (Qt6) or qmake (Qt5)
 
-The easiest way to build the module is to open `CMakeLists.txt` or `qtmqtt.pro` project in QtCreator that can be found in the Qt installation directory or downloaded repository (rember to checkout to branch name which correspond to yours Qt version), for example: `C:\Qt\6.4.3\Src\qtmqtt`. To build with Qt Creator, choose your target platform (using the specific toolchain).
+The easiest way to build the module is to open `CMakeLists.txt` (in case of Qt6) or `qtmqtt.pro` (in case of Qt5) project for `qtmqtt` sources directory in QtCreator that can be found in the Qt installation directory or downloaded repository -- `remember to checkout to tag` which correspond to yours installed Qt version. To build with Qt Creator, choose your target platform (using the specific toolchain).
 
 After a successful build, you can install the library by going to the `build` directory (check the Qt Creator Compile Output to find the directory) and running the following command in the shell:
 
